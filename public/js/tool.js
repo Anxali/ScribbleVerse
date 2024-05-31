@@ -1,6 +1,6 @@
 // connect to socket server
-const socket = io.connect("http://127.0.0.1:5500/");
-// *********************************Basic Setup
+const socket = io.connect("https://scribbleverse.onrender.com");
+// ----------Basic Setup
 const board = document.querySelector(".board");
 board.height = window.innerHeight;
 board.width = window.innerWidth;
