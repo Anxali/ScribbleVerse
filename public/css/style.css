@@ -1,0 +1,164 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .tool-img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    transition: transform 0.3s;
+  }
+
+  .board{
+    background-color: #151515;
+  }
+
+  .active {
+    width: 67px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #D8D9DA;
+  }
+
+  .toolBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    height: 18vh;
+    background: rgb(81,19,233);
+    background: linear-gradient(0deg, rgba(81,19,233,1) 0%, rgba(241,176,176,0.8092029047947304) 100%);
+  }
+
+  .toolPanel {
+    display: flex;
+    background-color: #FAF6F0;
+    height: 81%;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    border-radius: 0.8rem;
+    opacity: 0;
+  }
+
+  .tool-options {
+    height: 7rem;
+    width: 10rem;
+    display: none;
+    position: absolute;
+    top: 4.75rem;
+    left:-3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    
+  }
+  .tool-options.eraser{
+    left: -3rem;
+    height: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    
+  }
+  .show {
+    display: block;
+  }
+
+
+  .pencil-size {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: grey 1px solid; 
+  }
+ .tool-img:hover{
+  cursor: pointer;
+ }
+  .pencil-color {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type=range] {
+    
+    -webkit-appearance: none;
+    width: 90%;
+    height: 13px;
+    border-radius: 5px;
+    background: #C73659; 
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  input[type=range]:hover {
+    opacity: 1; 
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #dbb3bb;
+    cursor: pointer;
+  }
+  
+  .colors {
+    width: 20%;
+    height: 60%;
+    margin-right: 0.25rem;
+    border-radius: 50%
+  }
+  .white {
+    background-color: #EEF7FF;
+  }
+  .blue {
+    background-color: #C65BCF;
+  }
+  .orange {
+    background-color: #FB8B24;
+  }
+  .tool {
+    position: relative;
+  }
+  
+  .addAnimation{
+    animation-name: stretch;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    opacity: 1;
+  }
+  @keyframes stretch {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+      border-radius: 100%;
+    }
+  
+    50% {
+      transform: (0.7);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+  opacity: 1;
+    }
+  }
+  .canBg{
+    height: 3rem;
+  }
+  
